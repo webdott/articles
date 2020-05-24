@@ -6,7 +6,7 @@
 This article guide explains what Fetch API means, and the modern approach to making asynchronous request from API networks to your web page using the `fetch()` method.
 This article would aim to cover the following:
 
-1. Introduction to Fetch API.
+1. What is Fetch API.
 
 2. Why Fetch API.
 
@@ -16,9 +16,9 @@ This article would aim to cover the following:
 
 5. Async…Await.
 
-                                             .  .  .
+                                           .  .  .
 
-1. What is Fetch API?
+** What is Fetch API?**
 
 The Fetch API is known as a standard modern API that uses promises as its building block. Therefore, in order to have a good understanding of this concept, it is recommended to have a good understanding of Promises and Callbacks.
 This standard replaced the  [XMLHttpRequest (XHR)](https://flaviocopes.com/xhr/)  which used to be the means of making these network requests by developers. The difference between these two, is that Fetch API is promised-based.
@@ -36,7 +36,7 @@ In order to resolve, we need the `.then()` handler to wait for the server’s re
 
                                              .  .  .
 
-2. Why Fetch API.
+**Why Fetch API.**
 
 Although there are other various ways to make HTTP requests, the good thing about the Fetch API is that it is supported by most major browsers except the Internet Explorer (IE). It is also fully supported by the JavaScript Ecosystem coupled with being part of the MDN Mozilla Docs.
 
@@ -48,15 +48,15 @@ Hopefully, in years to come, the Fetch API would be fully supported across all b
 
                                              .  .  .
 
-3. AJAX
+**AJAX**
 
 [Asynchronous JavaScript and XML](https://en.wikipedia.org/wiki/Ajax_(programming) (AJAX) are group of web technologies that enable web applications to transfer and receive data from servers in the background without interrupting the activity or behavior of the existing page, by running the process in the background (asynchronously).
 
 AJAX is now commonly executed on web pages using the `fetch()` method, thereby allowing parts or portions of websites to be updated dynamically (loading content to the screen without refreshing the whole page).
 
-                                              .  .  .
+                                             .  .  .
 
-4. EXAMPLE GUIDES ON USING Fetch API.
+**EXAMPLE GUIDES ON USING Fetch API.**
 
 Using the `fetch()` method can be quite easy. All you have to do is to use the keyword coupled with the resource URL you are accessing, inside the parenthesis.
 
@@ -97,7 +97,7 @@ What the first `.then()` does, is converting the response to a `json` format, wh
 You might as well want to access just a specific object in the data. Remember I said we wanted to extract the `species` object. To do this, you just need to include the name of the object in the last `.then()` handler:
 
 
-```%[Link]
+```
 .then(data => console.log(data.species)) 
 //To access the species object```
 
@@ -113,9 +113,9 @@ fetch ('https://pokeapi.co/api/v2/pokemon/1/')
 //This would intercept errors if any
 ```
 
-                                           .  .  .
+                                          .  .  .
 
-5. Async…Await
+**Async…Await**
 
 The `async...await` syntax came around with the ES8 and reduced the syntax complexity that were attached to promises. Async functions are a combination of promises and generators (giving them higher level of abstraction over promises).
 
@@ -138,7 +138,7 @@ Easy to read right?! It sure felt easier to write too. The use of `await` allows
 
 Then we get the `json` format of this response and pass it to the `data` variable, before logging the value of the `species` object of the `data`, on the console.
 
-                                              .  .  .
+                                            .  .  .
 
 **Handling Errors in Async…Await**
 
