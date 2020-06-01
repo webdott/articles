@@ -48,18 +48,18 @@ Note: In this article, I would be using only the term ‘terminal’.
 
 2. Change path to the directory you want to app to be created on, using the *cd* command:
 
-
-![create-react-app3.png](Upload failed. Please re-upload the image)
+![create-react-app3.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591013339366/jSil79LSY.png)
 
 3. Type ```create-react-app <name of the app>``` in your terminal and hit Enter. This installs and the app and Voila!! We can start coding our app.
 
-
+![create-react-app5.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591013363636/vRKon1vIH.png)
 
 > 
 Note: If you get an error message, try using the *sudo* command to switch to root.
 
 4. Go into the app folder and open in VsCode or any IDE of your choice :
 
+![create-react-app4.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591013453444/5h3ZLdL1H.png)
 
 **Sketch And Structure**
 
@@ -87,7 +87,7 @@ Just as these components have been set out, this is how they would look like in 
 
 After the whole setup, we have our app’s *src* structure looking like this:
 
-
+![codestructure.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591013495837/voLGFjZmz.png)
 
 As you can see here, we created a *component* folder under the *src* folder, to house all individual and reusable components. This is one of the major advantages of React; it helps to break down our entire app into chunks (reusable components). We tend to see that advantage more, when building larger applications.
 
@@ -99,7 +99,9 @@ This particular *App* component would be a class component so that we can have a
 
 I would recommend we clear the whole content inside our *App.js* file and start coding it from scratch. However, you could just modify it to the code below:
 
+![App1.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591013587299/rDiL8fpu-.png)
 
+![App2.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591013613927/lArn7LhiN.png)
 
 Okay let’s explain what we’ve done so far - The first image just describes what we have to import. As you know, before writing any functional or class component in React, we have to import React. Since this is a class component, we also have to import React’s component class as well.
 
