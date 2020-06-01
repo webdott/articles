@@ -32,7 +32,9 @@ Since this is just a React tutorial, I am just going to drop the links to the CS
 
 
 
+
 **Setting Up the React App** 
+------------------------------
 
 For the sake of this example, we would be using the *create-react-app* method to set up our app. This is to make everything easy for us. 
 
@@ -63,6 +65,7 @@ Note: If you get an error message, try using the *sudo* command to switch to roo
 
 
 **Sketch And Structure**
+------------------------------
 
 Before we dive into coding our app, we need to have a visual representation or structure of what we want to achieve. I have a quick sketch of how we want the app to look like :
 
@@ -95,6 +98,7 @@ As you can see here, we created a *component* folder under the *src* folder, to 
 
 
 **Coding The App** 
+------------------------------
 
 Finally, it is time to code our app. With all our files in place, let us start with the *App* component since it would house all of our remaining components. 
 This particular *App* component would be a class component so that we can have access to React's *state*.
@@ -205,7 +209,9 @@ Our *InputForm* component is shown below:
 
 We make use of all necessary props and *export* our component. 
 
+
 **Conclusion**
+------------------------------
 
 And that’s it!! We have our to-do list app ready. Just add the necessary styles and we have our app looking exactly like the finished product at the beginning.
 
