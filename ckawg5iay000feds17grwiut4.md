@@ -42,24 +42,28 @@ If you do not have *create-react-app* set up on your computer, you can get start
 
 The following steps would get you started to setting up your app:
 
-1. Go to your terminal (if you are a MAC OS/LINUX user) or command prompt (if you are a Windows user).
 
+
+*1.* Go to your terminal (if you are a MAC OS/LINUX user) or command prompt (if you are a Windows user).
 
 > 
 Note: In this article, I would be using only the term ‘terminal’. 
 
-2. Change path to the directory you want to app to be created on, using the *cd* command:
+
+*2.* Change path to the directory you want to app to be created on, using the *cd* command:
 
 ![create-react-app3.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591015383987/puvGwtpn8.png)
 
-3. Type ```create-react-app <name of the app>``` in your terminal and hit Enter. This installs and the app and Voila!! We can start coding our app.
+
+*3.* Type ```create-react-app <name of the app>``` in your terminal and hit Enter. This installs and the app and Voila!! We can start coding our app.
 
 ![create-react-app5.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591015410701/GjJcnaJaY.png)
 
 > 
 Note: If you get an error message, try using the *sudo* command to switch to root.
 
-4. Go into the app folder and open in VsCode or any IDE of your choice :
+
+*4.* Go into the app folder and open in VsCode or any IDE of your choice :
 
 ![create-react-app4.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591015487543/kgUG08Ze9.png)
 
