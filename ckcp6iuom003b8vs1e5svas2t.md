@@ -13,6 +13,10 @@ This article covers the following:
 
 - Use of PHP and JQuery AJAX calls
 
+
+> Note: The operating system used for the article is Ubuntu 18.04.
+
+
 The app deployed to Heroku is just a simple HTML5 form:
 
 ![form_picture.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594928635604/ZBwJlTJfr.png)
