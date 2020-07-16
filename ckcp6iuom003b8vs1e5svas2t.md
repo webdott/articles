@@ -14,6 +14,8 @@ This article covers the following:
 - Use of PHP and JQuery AJAX calls
 
 The app deployed to Heroku is just a simple HTML5 form:
+
+![form_picture.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594928635604/ZBwJlTJfr.png)
  
 This is the HTML code below:
 
