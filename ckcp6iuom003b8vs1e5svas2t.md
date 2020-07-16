@@ -60,23 +60,23 @@ For the purpose of this article, we would be using the integration with existing
 
 After you login:
  
-1. Click on the 'New' button at the top-right-corner of the page.
+1 Click on the 'New' button at the top-right-corner of the page.
 
 ![Screenshot from 2020-07-16 15-01-24.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594925882769/w82i9d8wm.png)
 
-2. Type the name of the app you want to create in the option given and click 'create-app' .
+2 Type the name of the app you want to create in the option given and click 'create-app' .
 
 ![choose app name.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594925911089/b8uy7FzYX.png)
 
-3. Under the deployment method section, choose the 'Github' option and select the repository name you want to integrate your app with.
+3 Under the deployment method section, choose the 'Github' option and select the repository name you want to integrate your app with.
 
-4. Search for the appropriate repository and connect.
+4 Search for the appropriate repository and connect.
 
 ![connect github.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594925936360/NQkDxHUnp.png)
 
-5. You can select 'Enable Automatic Deploy' if you want.
+5 You can select 'Enable Automatic Deploy' if you want.
 
-6. Finally under the 'manual deploy' section, Click on Deploy branch. 
+6 Finally under the 'manual deploy' section, Click on Deploy branch. 
 
 ![view deploy.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926046266/a3IFKtA_Z.png)
 
@@ -103,15 +103,15 @@ To install cleardb add-on into your project:
 
 ![htmlform.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926115293/RONdarL1j.png)
 
-4. Select configure add-ons and click on the Find more add-ons.
+4 Select configure add-ons and click on the Find more add-ons.
 
 ![click configure.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926138563/xKLNlWNF6.png)
 
-5.  Scroll through the page and select ClearDB MySQL.
+5  Scroll through the page and select ClearDB MySQL.
 
 ![choose clear db.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926180889/8pwTnYE-w.png)
 
-6. Choose the plan suitable for you and install ClearDB.
+6 Choose the plan suitable for you and install ClearDB.
 
 Viola! You have the Database add-on installed.
 
@@ -166,7 +166,7 @@ To get these values, do the following:
 
 ![reveal.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926275850/5thFFVofS.png)
 
-3. copy the url beside the ClearDB_DATABASE_URL and separate them in this format:
+3 copy the url beside the ClearDB_DATABASE_URL and separate them in this format:
 
 ```
 mysql://bad816b66b485e:7f49ef11@us-cdbr-east-02.cleardb.com/heroku_db38da5d8dd34df?reconnect=true // full url.
@@ -184,25 +184,25 @@ We would also need our database name and to get that, you still go to your app o
 
 ### Connecting and Creating Table In The Database
 To connect to the database, take the following steps:
-1. Open up MySQL Workbench and click  ```+```  icon beside the MySQL Connections (to add new database connections).
+1 Open up MySQL Workbench and click  ```+```  icon beside the MySQL Connections (to add new database connections).
 
 ![before connection.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926343498/Ek-7abWxI.png)
 
-2. Add the necessary details that we have gotten from the URL and test the connection. If successful, click the ok button and you should see the database in your MySQL Workbench home.
+2 Add the necessary details that we have gotten from the URL and test the connection. If successful, click the ok button and you should see the database in your MySQL Workbench home.
 
 ![create connection.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926361631/9BYPLtSDf.png)
 
-3. Click on the database connection you just set and select schema.
+3 Click on the database connection you just set and select schema.
 
-4. Click on create new table
+4 Click on create new table
 
 ![create table button.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926423996/QtfM-IAqY.png)
 
-5. Add the various input fields to be stored (name, email, and message in our case), and tick the necessary attributes for each field.
+5 Add the various input fields to be stored (name, email, and message in our case), and tick the necessary attributes for each field.
 
 ![table creation.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926452930/95q4BRn8B.png)
 
-6. Click Apply and your table should be set.
+6 Click Apply and your table should be set.
 
 ![apply table.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926464577/-vueBETpH.png)
 
