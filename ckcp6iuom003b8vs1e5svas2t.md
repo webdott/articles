@@ -1,4 +1,4 @@
-## How to Capture HTML5 Form Inputs To ClearDB MySQL on Heroku With Using PHP and JQuery AJAX
+## How to Capture HTML5 Form Inputs To ClearDB MySQL Database on Heroku Using PHP and JQuery AJAX
 
 
 ![php_mysql_jquery.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1594927132870/KvrfiyOmr.jpeg)
