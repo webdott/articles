@@ -190,6 +190,7 @@ We would also need our database name and to get that, you still go to your app o
 
 ### Connecting and Creating Table In The Database
 To connect to the database, take the following steps:
+
 1 Open up MySQL Workbench and click  ```+```  icon beside the MySQL Connections (to add new database connections).
 
 ![before connection.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926343498/Ek-7abWxI.png)
@@ -293,3 +294,7 @@ The ```.serialize()```  function captures all the form input fields.  After the 
 And that's it, commit your file changes to your Github repository and you once you input your respective values, you should see them in the database table.
 
 ![success_message.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1594926531092/6KFcZFqvQ.png)
+
+You should check your table and see your input details.
+
+*#DevBlogging*
