@@ -23,7 +23,8 @@ The app deployed to Heroku is just a simple HTML5 form:
  
 This is the HTML code below:
 
-``` HTML
+``` 
+HTML
 
     <!DOCTYPE html>
     <html lang="en">
