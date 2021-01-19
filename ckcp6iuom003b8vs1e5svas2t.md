@@ -23,7 +23,7 @@ The app deployed to Heroku is just a simple HTML5 form:
  
 This is the HTML code below:
 
-``` html
+``` HTML
 
 <!DOCTYPE html>
 <html lang="en">
@@ -222,7 +222,7 @@ Finally, it is time to write our PHP script and jQuery code.
 To connect and store our input values to the database that we have created, 
 and write the following code in our form.php file :
 
-```  php
+``` PHP
 
 <?php
 
