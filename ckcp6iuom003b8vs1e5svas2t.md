@@ -54,8 +54,7 @@ This is the HTML code below:
 </body>
 </html>
 ``` 
-
-https://codedrops.io/#sphwpjsznne5o3cm9lbewomius8n
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 
 ## **Deploying Project To Heroku App**
