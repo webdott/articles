@@ -24,6 +24,7 @@ The app deployed to Heroku is just a simple HTML5 form:
 This is the HTML code below:
 
 ```
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,8 +54,8 @@ This is the HTML code below:
 <script src="form.js" type="text/javascript">
 </body>
 </html>
+
 ``` 
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 
 ## **Deploying Project To Heroku App**
