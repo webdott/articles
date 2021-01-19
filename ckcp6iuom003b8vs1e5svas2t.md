@@ -226,7 +226,8 @@ Finally, it is time to write our PHP script and jQuery code.
 To connect and store our input values to the database that we have created, 
 and write the following code in our form.php file :
 
-``` PHP
+```
+ PHP
 
 <?php
 
