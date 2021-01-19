@@ -16,7 +16,7 @@ This article would aim to cover the following:
 
 5. Async…Await.
 
-                                           .  .  .
+                                           ___________________________
 
 ** What is Fetch API?**
 
@@ -34,7 +34,7 @@ The `Response` is resolved from the `Request` to find out whether it is successf
 
 In order to resolve, we need the `.then()` handler to wait for the server’s response, and enable us to access the promise’s content. More light will be shed on this as we progress.
 
-                                             .  .  .
+                                            _______________________________
 
 **Why Fetch API.**
 
@@ -46,7 +46,7 @@ Below is an image showing the browser support for the `fetch()` function from  [
 
 Hopefully, in years to come, the Fetch API would be fully supported across all browsers.
 
-                                             .  .  .
+                                             __________________________________
 
 **AJAX**
 
@@ -54,7 +54,7 @@ Hopefully, in years to come, the Fetch API would be fully supported across all b
 
 AJAX is now commonly executed on web pages using the `fetch()` method, thereby allowing parts or portions of websites to be updated dynamically (loading content to the screen without refreshing the whole page).
 
-                                             .  .  .
+                                             _____________________________________
 
 **EXAMPLE GUIDES ON USING Fetch API.**
 
@@ -83,12 +83,14 @@ When manipulating the resource, we make use of just a single `.then()` handler. 
 Lets see how that would look like:
 
 
-```
+``` javascript
+
 fetch ('https://pokeapi.co/api/v2/pokemon/1/') 
    .then(response => response.json() 
-   .then(data => console.log(data))``` 
- 
+   .then(data => console.log(data))
 
+``` 
+ 
 
 What the first `.then()` does, is converting the response to a `json` format, while the second allows us to access the data so we have something like this:
 
@@ -97,23 +99,27 @@ What the first `.then()` does, is converting the response to a `json` format, wh
 You might as well want to access just a specific object in the data. Remember I said we wanted to extract the `species` object. To do this, you just need to include the name of the object in the last `.then()` handler:
 
 
-```
-.then(data => console.log(data.species)) 
-//To access the species object```
+``` javascript
 
+.then(data => console.log(data.species)) 
+//To access the species object
+
+```
 
 **Handling Errors**
 
 It is important to handle errors when using the `fetch()` method(since it returns a promise). Therefore, to handle errors in execution of our request, we could use the common `catch` method of the `promise`:
 
-```
+``` javascript 
+
 fetch ('https://pokeapi.co/api/v2/pokemon/1/')
  .then(response => {….})
  .catch(err => console.log(err)) 
 //This would intercept errors if any
+
 ```
 
-                                          .  .  .
+                                          ______________________________
 
 **Async…Await**
 
@@ -125,26 +131,29 @@ Using the `.then()` syntax is nice, but the `async...await` syntax provides a mo
 
 So converting the code we wrote in the example above, using the `async...await` syntax, we have:
 
-```
+``` javascript
+
 const fetchPokemonSpecie = async() => {
  const response = await fetch('https://pokeapi.co/api/v2/pokemon/1/');
  const data = await response.json();
  console.log(data.species)
 }
 fetchPokemonSpecie()
+
 ```
 
 Easy to read right?! It sure felt easier to write too. The use of `await` allows us to wait for each `Promise` to be `resolved` before moving on to the next. First, we wait for the `fetch` request to be over before passing its value to the `response` variable.
 
 Then we get the `json` format of this response and pass it to the `data` variable, before logging the value of the `species` object of the `data`, on the console.
 
-                                            .  .  .
+                                            _______________________________
 
 **Handling Errors in Async…Await**
 
 This basically follows the same method we use with the `.then()` syntax except we use the `try…catch` block in this case instead of just `catch`.
 
-```
+``` javascript 
+
 const fetchPokemonSpecie = async() => { 
    try {
      const response = await fetch('https://pokeapi.co/api/v2/pokemon/1/');
@@ -154,13 +163,15 @@ const fetchPokemonSpecie = async() => {
      console.log(err)
    }
 fetchPokemonSpecie()
+
 ```
 
 We use this error handling method when handling network failures. The code in the `catch` block would only run when a network error occurs.
 
 Looking at the `Promise` gotten after running the `fetch()` method, we have a `Response` object with an `ok` property. We could also handle an error by using an if statement declaring that if this `ok` property is `true`, it lies in the 200 range and should execute the code; otherwise, throw an error.
 
-```
+``` javascript 
+
 const fetchPokemonSpecie = async() => {
    const response = await fetch('https://pokeapi.co/api/v2/pokemon/1/'); 
    if (response.ok) {
@@ -171,8 +182,9 @@ const fetchPokemonSpecie = async() => {
    }
 }
 fetchPokemonSpecie()
+
 ```
-                                          .  .  .
+                                         ___________________________________
 
 **Conclusion**
 
@@ -180,7 +192,7 @@ After seeing this article, I hope you now have a basic understanding of what the
 
 Personally, I think one can understand this concept without really having any strong coding or programming background. Now, go play around with this and start using it to make your AJAX requests.
 
-                                          .  .  .
+                                          _____________________________________
 
 If you liked this article, please do well to clap and follow. I would like to write more technical articles in the nearest future. Here are links to my previous articles.
 
