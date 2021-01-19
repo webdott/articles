@@ -25,40 +25,42 @@ This is the HTML code below:
 
 ``` HTML
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Html Form Demo</title>
-</head>
-<body>
-    <div class="container">
-        <h3>Get In Touch</h3>
-        <form action="form.php" method="POST" id="form">
-            <input type="text" id="name" name="name" placeholder="Your name">
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="index.css">
+            <title>Html Form Demo</title>
+        </head>
+        <body>
+             <div class="container">
+                 <h3>Get In Touch</h3>
+                 <form action="form.php" method="POST" id="form">
+                     <input type="text" id="name" name="name" placeholder="Your name">
 
-            <input type="email" id="email" name="email" placeholder="Your email" required>
+                     <input type="email" id="email" name="email" placeholder="Your email" 
+                     required>
 
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Write a message" required></textarea>
+                     <textarea name="message" id="message" cols="30" rows="10" 
+                     placeholder="Write a message" required></textarea>
 
-            <button name="submit">Send Message</button>
-        </form>
-    </div>
+                     <button name="submit">Send Message</button>
+                </form>
+             </div>
 
-    <!-- script tags -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
-</script>
+             <!-- script tags -->
+             <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256- 
+             9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" 
+             crossorigin="anonymous">
+             </script>
 
-<script src="form.js" type="text/javascript">
-</body>
-</html>
+             <script src="form.js" type="text/javascript">
+        </body>
+    </html>
 
 ``` 
-
-* * *
-
+---------------------------------------
 ## **Deploying Project To Heroku App**
 
 Heroku simply put,  is an easy-to-use container-based cloud Platform as a Service (PaaS) that developers can use to deploy, manage, and scale modern apps. To read more about it, check  [here](https://www.heroku.com/about).
