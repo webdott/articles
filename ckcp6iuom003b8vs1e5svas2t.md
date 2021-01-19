@@ -23,7 +23,7 @@ The app deployed to Heroku is just a simple HTML5 form:
  
 This is the HTML code below:
 
-```
+``` html
 
 <!DOCTYPE html>
 <html lang="en">
@@ -222,7 +222,8 @@ Finally, it is time to write our PHP script and jQuery code.
 To connect and store our input values to the database that we have created, 
 and write the following code in our form.php file :
 
-```
+```  php
+
 <?php
 
 $hostname = "us-cdbr-east-02.cleardb.com ";
@@ -263,7 +264,8 @@ Remember we added the jQuery script tag to our html file which would enable our 
 
 So in our custom js file, we write our jQuery code:
 
-```
+```  Javascript
+
 const name = $('#name');
 const email = $('#email');
 const message = $('#message');
@@ -287,6 +289,7 @@ $('#form').submit(function(e){
        }
     })
 })
+
 ``` 
 What this file does, is to hijack the PHP redirection and alert a success message if successful and an error message if otherwise.
 
