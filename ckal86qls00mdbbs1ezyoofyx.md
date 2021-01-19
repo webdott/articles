@@ -16,7 +16,7 @@ This article would aim to cover the following:
 
 5. Async…Await.
 
-                                           ___________________________
+---
 
 ** What is Fetch API?**
 
@@ -34,7 +34,7 @@ The `Response` is resolved from the `Request` to find out whether it is successf
 
 In order to resolve, we need the `.then()` handler to wait for the server’s response, and enable us to access the promise’s content. More light will be shed on this as we progress.
 
-                                            _______________________________
+---
 
 **Why Fetch API.**
 
@@ -46,7 +46,7 @@ Below is an image showing the browser support for the `fetch()` function from  [
 
 Hopefully, in years to come, the Fetch API would be fully supported across all browsers.
 
-                                             __________________________________
+---
 
 **AJAX**
 
@@ -54,7 +54,7 @@ Hopefully, in years to come, the Fetch API would be fully supported across all b
 
 AJAX is now commonly executed on web pages using the `fetch()` method, thereby allowing parts or portions of websites to be updated dynamically (loading content to the screen without refreshing the whole page).
 
-                                             _____________________________________
+---
 
 **EXAMPLE GUIDES ON USING Fetch API.**
 
@@ -68,8 +68,10 @@ Using the `fetch()` method can be quite easy. All you have to do is to use the k
 
 So for the sake of this example we would be fetching a species object from the PokéAPI:
 
-```
+``` javascript
+
 fetch('https://pokeapi.co/api/v2/pokemon/1/')
+
 ```
 
 As mentioned before, this code would return a Promise that would contain a bunch of stuff looking like this:
@@ -83,7 +85,7 @@ When manipulating the resource, we make use of just a single `.then()` handler. 
 Lets see how that would look like:
 
 
-``` javascript
+```javascript
 
 fetch ('https://pokeapi.co/api/v2/pokemon/1/') 
    .then(response => response.json() 
@@ -99,7 +101,7 @@ What the first `.then()` does, is converting the response to a `json` format, wh
 You might as well want to access just a specific object in the data. Remember I said we wanted to extract the `species` object. To do this, you just need to include the name of the object in the last `.then()` handler:
 
 
-``` javascript
+```  javascript
 
 .then(data => console.log(data.species)) 
 //To access the species object
@@ -119,7 +121,7 @@ fetch ('https://pokeapi.co/api/v2/pokemon/1/')
 
 ```
 
-                                          ______________________________
+---
 
 **Async…Await**
 
@@ -146,7 +148,7 @@ Easy to read right?! It sure felt easier to write too. The use of `await` allows
 
 Then we get the `json` format of this response and pass it to the `data` variable, before logging the value of the `species` object of the `data`, on the console.
 
-                                            _______________________________
+---
 
 **Handling Errors in Async…Await**
 
@@ -184,7 +186,7 @@ const fetchPokemonSpecie = async() => {
 fetchPokemonSpecie()
 
 ```
-                                         ___________________________________
+---
 
 **Conclusion**
 
@@ -192,14 +194,9 @@ After seeing this article, I hope you now have a basic understanding of what the
 
 Personally, I think one can understand this concept without really having any strong coding or programming background. Now, go play around with this and start using it to make your AJAX requests.
 
-                                          _____________________________________
+---
 
-If you liked this article, please do well to clap and follow. I would like to write more technical articles in the nearest future. Here are links to my previous articles.
-
-https://medium.com/@webdot_30/starting-out-as-a-front-end-web-developer-bf9d8867829c
-
-https://t.co/MOEtRSYQHJ?amp=1
-
+If you liked this article, please do well to clap and follow. I would like to write more technical articles in the nearest future.
 
 
 
