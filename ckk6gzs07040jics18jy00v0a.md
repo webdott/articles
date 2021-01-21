@@ -10,37 +10,8 @@ This article explains context API, how to use them and when to use them. To unde
 
 In a typical React application, data is passed down as `props` from parent to child components. This means that any state to be accessed by the children has to be placed in the parent component. These states can then be passed down many levels deep (depending on size of the application) until they finally get to the component that really needs them.
 
-```
-const App = () => {
-  return (
-    /* App component that would render Header component */
-    <div className="App">
-      <Header user={user}/>
-    </div>
-  );
-}
+![code1-react-context-explained.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611268590395/tALeKoqtq.png)
 
-const Header = ({ user }) => {
-  return(
-    /* Header component that would render NavigationLinks component */
-    <NavigationLinks toggleTheme={toggleTheme}/>
-  )
-}
-
-const NavigationLinks = ({ user }) => {
-    return (
-        /* Finally the ToggleButton renders the link */
-        <Link>
-        {user.isSignedIn ? (
-            'Logout'
-        ) : (
-            'Sign in'
-        )}
-        </Link>
-    )
-  }
-
-```
 
 In cases like this, the Header might not necessarily need the `user` prop but has to pass it through because it contains a child component that needs it. In smaller applications, you can afford to allow this as it wouldn't really affect much in terms of code complexity - you can opt for the use of  [Component composition](https://reactjs.org/docs/composition-vs-inheritance.html) instead; where the component itself that needs the props is passed down, thereby giving the intermediate components no need to know what props is being passed.
 
@@ -82,106 +53,28 @@ Let's get started. Shall we?
 ### createContext or React.createContext
 
 Whenever we use `createContext()` or `React.createContext()`, a Context object is created; and this helps any React component created to read the current value of the Context from it's nearest `Provider` upwards the component tree. An example of this would be:
-``` 
-const ThemeContext = React.createContext()
-```
+
+![code9-react-context-api-explained.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611268660825/N9HkS6HDq.png)
 
 ### Context.Provider
 
 For every Context object created , there is a React Provider component also available that gives consuming components the ability to subscribe to Context changes. 
-```
-<ThemeContext.Provider  value={/*something awesome*/}>
-</ThemeContext.Provider>
-```
+
+![code6-react-context-api-explained.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611268680374/Ldth052BZ.png)
 
 As seen above, the `Provider` component receives a value prop that would be available to all consumer components nested under it. Based on what was said earlier concerning the consuming components taking the value of the closest Provider to them, we can decide to override values of different Providers by nesting them.
 
 Using what we've learnt so far, we can go ahead to create our own ThemeContext for our app. We are deciding to keep the context created in a file of it's own (*ThemeContextProvider.js*) so that it would be easy to differenciate.
 
-```
-/* ThemeContextProvider.js*/
+![code2-react-context-api-explained.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611268732125/bfoFLJpSO.png)
+`ThemeContext.js`
 
-import React, { useState, createContext } from 'react';
-
-/* Context created */
-export const ThemeContext = createContext();
-
-// stylings based on theme chosen
-const themeValues = {
-    light: {
-        background: '#eee',
-        color: '#00154f',
-        linkColors: '#00154f'
-    },
-    dark: {
-        background: '#00154f',
-        color: '#f4af1b',
-        linkColors: '#f4a1b'
-    }
-}
-
-const ThemeContextProvider = ({ children }) => {
-    // General Theme state
-    const [isLightTheme, setIsLightTheme] = useState(true);
-
-    // Toggle theme Function
-    const toggleTheme = () => {
-        setIsLightTheme(isLightTheme ? false : true);
-    }
-
-    const themeStyles = isLightTheme ? themeValues.light : themeValues.dark;
-
-    return (
-        <ThemeContext.Provider value={{ isLightTheme, themeStyles, toggleTheme }}>
-            { children }
-        </ThemeContext.Provider>
-    );
-}
-
-export default ThemeContextProvider;
-```
 So we import React and destructure off the `useState` hook and `createContext` method from 'react'. Then our Context object is made available to us using `createContext`. We then have various styles for the app background and text color depending on theme chosen. A *ThemeContextProvider* component with the default state of light theme, and function to toggle theme is then created which would pass it's `children` prop to the *ThemeContext.Provider* component. The value of the *ThemeContext.Provider* component would be an object containing the theme state, theme styles and the toggle theme function. 
 
 After creating this Provider component, we move on to exporting it to our *App* component in the *App.js* file and then nesting all other components/pages in need of it for consumption.
 
-```
-/* App.js*/
-
-import React from 'react';
-import Header from './components/Header';
-import { Switch, Route } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import ThemeContextProvider from './contexts/ThemeContext';
-
-const App = () => {
-  return (
-    <div className="App">
-      <ThemeContextProvider>
-         {/* Header, Home and About components 
-         wrapped inside the 
-         ThemeContextProvider component*/}
-        <Header />
-        <Switch>
-          <Route 
-            exact
-            path='/'
-            component={Home}
-          />
-
-          <Route 
-            exact
-            path='/about'
-            component={About}
-          />
-        </Switch>
-      </ThemeContextProvider>
-    </div>
-  );
-}
-
-export default App;
-```
+![code3 - react-context-api-explained.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611268809911/VcavZA22y.png)
+`App.js`
 
 So now that we've set up the Context and gotten it ready for consumption through the Provider, let's see the different ways of consuming Contexts.
 
@@ -189,32 +82,8 @@ So now that we've set up the Context and gotten it ready for consumption through
 
 This method of consuming Contexts is used in class components alone. It entails the `contextType` property of a class being assigned to the object created with `createContext()`. The current value of the Context can be referenced using `this.context`. I have made our *Home* page in our app the class component to demonstrate this.
 
-``` JSX
-/* Home.js */
-
-import React, { Component } from 'react';
-import { ThemeContext } from '../contexts/ThemeContext';
-
-class Home extends Component {
-    static contextType = ThemeContext;
-    render() {
-        const { themeStyles } = this.context;
-        return (
-            <div 
-            className='home' 
-            style={{
-                background: themeStyles.background,
-                color: themeStyles.color
-            }}>
-                <h1>Home</h1>
-                <p>This is the home page</p>
-            </div>
-        );
-    }
-}
-
-export default Home;
-```
+![code4-react-context-api-explained.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611268849395/Km1Agr1Fd.png)
+`Home.js`
 
 We only need the theme styles from the Context object values in this case so we destructure only that from `this.context` and use the styles.
 
@@ -226,43 +95,13 @@ The remaining two methods give room for consuming multiple contexts and they are
 
 Just like `Context.Provider`, `Context.Consumer` is a React component created alongside the Context object and allows you subscribe to changes in Context within a functional components. This also allows a component to consume multiple Contexts. In our case, we have:
 
-```
-<ThemeContext.Consumer>
-     {contextValue => /* render other components /elements based on context value */}
-</ThemeContext.Consumer>
-```
+![code5-react-context-api-explained.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611268876636/yq5YLP9y1.png)
 
 This `Consumer` component requires a function with a *contextValue* argument corresponding to value of the nearest Context Provider above it in the component tree. To demonstrate this part, we would be using the *About* page which is a functional component.
 
-```
-/* About.js */
+![code7-react-context-api-explained.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611268912970/ngw0ZwwDk.png)
+`About.js`
 
-import React from 'react';
-import { ThemeContext } from '../contexts/ThemeContext';
-
-const About = () => {
-    return (
-        <ThemeContext.Consumer>
-            {context => {
-                const { themeStyles } = context;
-                return (
-                    <div className='about'
-                    style={{
-                        background: themeStyles.background,
-                        color: themeStyles.color
-                    }}
-                    >
-                        <h1>About</h1>
-                        <p>This is the About page</p>
-                    </div>
-                )
-            }}
-        </ThemeContext.Consumer>
-    );
-}
-
-export default About;
-```
 So in this case, we destructure off only the theme styles from the Context value because that's what we need for now. After we've done this, we have out *Home* and *About* pages looking like this:
 
 
@@ -274,44 +113,9 @@ So in this case, we destructure off only the theme styles from the Context value
 
 The final method used for consuming Contexts is the `useContext()` hook. This hook will receive the context to be consumed, and the `value` would correspond that of the nearest Provider for this context, upwards the component tree. The *Header* component in our app is yet to consume the `ThemeContext`, so let's use that to demonstrate.
 
-```
-import React, {useContext} from 'react';
-import { Link } from 'react-router-dom';
-import { ThemeContext } from '../contexts/ThemeContext';
+![code8-react-context-api-explained.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1611268950868/X3Dvjq2k4.png)
+`Header.js`
 
-const Header = () => {
-    const { isLightTheme, themeStyles, toggleTheme } = useContext(ThemeContext);
-
-    return (
-        <nav className='header'
-        style={{
-            background: themeStyles.background,
-        }}
-        >
-            <Link to='/' style={{color: themeStyles.linkColors}}>
-                Home
-            </Link>
-            
-            <Link to='/about' style={{color: themeStyles.linkColors}}>
-                About
-            </Link>
-
-            <Link to='#' 
-            style={{color: themeStyles.linkColors}}
-            onClick={toggleTheme}
-            >
-                {isLightTheme ? (
-                    <i className="fas fa-sun"></i>
-                ) : (
-                    <i class="fas fa-moon"></i>
-                )}
-            </Link>
-        </nav>
-    );
-}
-
-export default Header;
-```
 This is the component where we really need three of our Context values which we destructure from the `useContext` hook - the `isLightTheme` value is used to determine what icon would be rendered for the theme toggler;  the `themeStyles` value is used for styling of the background for the header and also the nav links. Finally the toggleTheme function is passed to the `onClick` Event of the theme toggler.
 
 Phew! that was a lot.
