@@ -187,7 +187,7 @@ So now that we've set up the Context and gotten it ready for consumption through
 
 ### contextType
 
-This method of consuming Contexts is used on classes alone. It entails the `contextType` property of a class being assigned to the object created with `createContext()`. The current value of the Context can be referenced using `this.context`. I have made our *Home* page in our app the class component to demonstrate this.
+This method of consuming Contexts is used in class components alone. It entails the `contextType` property of a class being assigned to the object created with `createContext()`. The current value of the Context can be referenced using `this.context`. I have made our *Home* page in our app the class component to demonstrate this.
 
 ``` JSX
 /* Home.js */
@@ -228,7 +228,7 @@ Just like `Context.Provider`, `Context.Consumer` is a React component created al
 
 ```
 <ThemeContext.Consumer>
-{contextValue => /* render other components /elements based on context value */}
+     {contextValue => /* render other components /elements based on context value */}
 </ThemeContext.Consumer>
 ```
 
@@ -272,7 +272,7 @@ So in this case, we destructure off only the theme styles from the Context value
 
 ### useContext
 
-The final method used for consuming Contexts is the `useContext()` hook. This hook will receive the context to be consumed and the value would correspond to that of the nearest Provider upwards the component tree. The *Header* component in our app is yet to consume the `ThemeContext`, so let's use that to demonstrate.
+The final method used for consuming Contexts is the `useContext()` hook. This hook will receive the context to be consumed, and the `value` would correspond that of the nearest Provider for this context, upwards the component tree. The *Header* component in our app is yet to consume the `ThemeContext`, so let's use that to demonstrate.
 
 ```
 import React, {useContext} from 'react';
