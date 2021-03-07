@@ -2,7 +2,7 @@
 
 Hey Everyone! 👋  , 
 
-This article explains context API, how to use them and when to use them. To understand this article, you might need a basic understanding of  [ React ](https://reactjs.org) and basic of  [React hooks ](https://reactjs.org/docs/hooks-intro.html). 
+This article explains context API, how to use them and when to use them. To understand this article, you might need a basic understanding of  [ React ](https://reactjs.org) and [React hooks ](https://reactjs.org/docs/hooks-intro.html). 
 
 ***
 
