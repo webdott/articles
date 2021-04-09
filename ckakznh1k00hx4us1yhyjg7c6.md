@@ -1,9 +1,6 @@
 ## Feel you are addicted to your phone? It might not be your fault. Here's why…
 
 
-![phone addiction photo](https://cdn.hashnode.com/res/hashnode/image/upload/v1590319187863/yoIMmGJcw.jpeg)
-
-
 Have you ever spent so much time on your phone doing nothing but checking feeds and messages?
 
 You just happened to snap out of that temporary hypnotism and end up getting angry at yourself for being unproductive when you were supposed to be doing something else.
@@ -22,9 +19,7 @@ Inasmuch these algorithms coupled with technological systems help us in our ever
 I felt the urge to write this article after seeing this particular documentary,  ["All Hail the Algorithm"](https://interactive.aljazeera.com/aje/2019/hail-algorithms/index.html)  on AlJazeera and saw the various ways at which we are actually manipulated to use most technologies almost unconsciously.
 
 The huge concern here, is that algorithms are being made to make decisions about people, and there are risks behind every statistical model that make predictions about how we behave, or those that match people to resources.
-
-                                       .   .   .
-
+ * * *
 Big Tech. companies like Google, Facebook, Huawei e.t.c. all come with various products every now and then with the notion or aim as they say, "to connect the unconnected". This mostly happens in Africa where most of its countries are developing. Due to the fact that these countries want to be connected and advanced, they embrace these opportunities almost as fast as they can. What they do not consider however, is the risk or cost that comes with all these.
 
 These big companies have various software planted behind these amazing products to collect data of various people ranging from customer's names to numbers, preferences, emails and use these things to their advantage.
@@ -55,7 +50,7 @@ Here in Africa, we have leaders or people who are scared of asking critical ques
 
 > "I have come to realize that our lives, family members, locations, preferences, dislikes and all that, isn't really data until there are algorithms that can convert every single human being to a collection of bits that money can be made off of." - Ali Rae
 
-                                          .   .   .
+* * *
 
 Back to this phone issue, there are people whose sole purpose is making you spend the much time you do on your device apps. These people are called "behavior specialists" or "human interaction designers". They make strong use of psychology and come up with algorithms together with the data gathered from you to create the sort of hypnotism you battle with.
 
