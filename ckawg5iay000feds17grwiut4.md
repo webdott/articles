@@ -1,9 +1,6 @@
 ## How To Build A To-Do List With React
 
 
-![Final app.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591008906908/Tc_9Ji6hu.png)
-
-
 Things you must know:
 
 - 
@@ -32,7 +29,7 @@ Since this is just a React tutorial, I am just going to drop the links to the CS
 
 
 
-
+***
 **Setting Up the React App** 
 ------------------------------
 
@@ -67,7 +64,7 @@ Note: If you get an error message, try using the *sudo* command to switch to roo
 
 ![create-react-app4.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1591015487543/kgUG08Ze9.png)
 
-
+***
 **Sketch And Structure**
 ------------------------------
 
@@ -100,7 +97,7 @@ After the whole setup, we have our app’s *src* structure looking like this:
 As you can see here, we created a *component* folder under the *src* folder, to house all individual and reusable components. This is one of the major advantages of React; it helps to break down our entire app into chunks (reusable components). We tend to see that advantage more, when building larger applications.
 
 
-
+***
 **Coding The App** 
 ------------------------------
 
@@ -213,7 +210,7 @@ Our *InputForm* component is shown below:
 
 We make use of all necessary props and *export* our component. 
 
-
+***
 **Conclusion**
 ------------------------------
 
@@ -221,8 +218,7 @@ And that’s it!! We have our to-do list app ready. Just add the necessary style
 
 Understanding a little project like this can help you grab some basic concepts in React and prepare you to learn more challenging concepts as you proceed.
 
-
-                                   .  .  .
+***
 
 If you liked this article, you could share and give a thumbs up. Cheers!! 
 
